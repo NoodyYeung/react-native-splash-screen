@@ -1,9 +1,13 @@
 package org.devio.rn.splashscreen;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.text.Layout;
+import android.view.LayoutInflater;
 
 import java.lang.ref.WeakReference;
+import java.util.zip.Inflater;
 
 /**
  * SplashScreen
@@ -27,8 +31,7 @@ public class SplashScreen {
             @Override
             public void run() {
                 if (!activity.isFinishing()) {
-
-                    mSplashDialog = new Dialog(activity, fullScreen ? R.style.SplashScreen_Fullscreen : R.style.SplashScreen_SplashTheme);
+                    mSplashDialog = new Dialog(activity, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
                     mSplashDialog.setContentView(R.layout.launch_screen);
                     mSplashDialog.setCancelable(false);
 
